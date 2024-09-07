@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Home">Home</a></li>
+            <li><a href="Service">Service</a></li>
+            <li><a href="Contact">Contact</a></li>
+            <li><a href="About">About</a></li>
+        </ul>
+    </nav>
+    <form action="/adddata/data" method="post">
+        <label for="Location">Location    :</label>
+        <input type="text" id="Location" name="Location" required><br><br>
+        <label for="cuisine">Cuisine    </label>
+        <input type="text" id="cuisine" name="cuisine" required><br><br>
+        <label for="Rating">Rating    :</label>
+        <input type="text" id="Rating" name="Rating" required><br><br>
+        <label for="Seating">Seating    :</label>
+        <input type="text" id="Seating" name="Seating" required><br><br>
+        <label for="Average Meal Price">Average Meal Price    :</label>
+        <input type="text" id="Average Meal Price" name="Average Meal Price" required><br><br>
+        <label for="Marketing Budget">Marketing Budget     :</label>
+        <input type="text" id="Marketing Budget" name="Marketing Budget" required><br><br>
+        <label for="Social Media Followers">Social Media Followers    :</label>
+        <input type="text" id="Social Media Followers" name="Social Media Followers" required><br><br>
+        <label for="Chef Experience Years">Chef Experience Years    :</label>
+        <input type="text" id="Chef Experience Years" name="Chef Experience Years" required><br><br>
+        <label for="Number of Reviews">Number of Reviews    :</label>
+        <input type="text" id="Number of Reviews" name="Number of Reviews" required><br><br>
+        <label for="Avg Review Length">Avg Review Length    :</label>
+        <input type="text" id="Avg Review Length" name="Avg Review Length" required><br><br>
+        <label for="Ambience Score">Ambience Score    :</label>
+        <input type="text" id="Ambience Score" name="Ambience Score" required><br><br>
+        <label for="Service Quality Score">Service Quality Score    :</label>
+        <input type="text" id="Service Quality Score" name="Service Quality Score" required><br><br>
+        <label for="Parking Availability">Parking Availability    :</label>
+        <input type="text" id="Parking Availability" name="Parking Availability" required><br><br>
+        <label for="Weekend Reservations">Weekend Reservations    :</label>
+        <input type="text" id="Weekend Reservations" name="Weekend Reservations" required><br><br>
+        <label for="Weekday Reservations">Weekday Reservations    :</label>
+        <input type="text" id="Weekday Reservations" name="Weekday Reservations" required><br><br>
+        <input class="pred" type="submit" value="Submit"><br><br><br><br>
+    </form>
+    <form action="/analyze" method="get">
+        <label for="analyze">Check prediction</label>
+        <button type="submit">Check</button>
+    </form>
+</body>
+</html>

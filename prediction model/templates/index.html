@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body> 
+    <nav>
+        <ul>
+            <li><a href="Home">Home</a></li>
+            <li><a href="Service">Service</a></li>
+            <li><a href="Contact">Contact</a></li>
+            <li><a href="About">About</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h1>
+            Restaurant Predictions
+        </h1>
+        <img src="" alt="">
+    
+        <p>This web site is for prediction of restaurants revenue. </p>
+        <p>below you can see your file</p>
+        <form action="/action/startpage" method="get">
+            <p>View file   </p>
+            <button type="submit">View file</button>
+        </form>
+        <p>Here RandomForestRegressor model is in use.</p>
+        <p>to see model info click below .</p>
+        <form action="/viewmodel" method="get">
+            <p>know model   </p>
+            <button type="submit">model</button>
+        </form>
+        <p>Add Data of your Restaurant to see your Restaurants revenue prediction.</p>
+        <form action="/adddata" method="get">
+            <p>click to add data</p>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>
