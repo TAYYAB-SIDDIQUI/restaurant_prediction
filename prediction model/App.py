@@ -69,16 +69,7 @@ def data():
     return render_template("adddata.html"),form_df
 def allow(filename):
     return "." in filename and filename.rsplit(".",1)[1].lower() in app.config["ALLOWED_EXTENSIONS"]
-@app.route("/File",methods=["GET","POST"])
-def file():
-    if request.method=="POST":
-        file=request.files.get("file")
-        if file and file.filename:
-            file.save(f"{app.config['UPLOAD_FOLDER']}/{file.filename}")
-        else:
-            print("no file import")
-            return f"file loaded {file.filename}"
-    return "file"
+
 @app.route("/analyze",methods=["GET","POST"])
 def analyse():
     if request.method=="GET":
