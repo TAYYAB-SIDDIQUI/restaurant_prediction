@@ -67,8 +67,7 @@ def data():
                               "wkr":[wkr]})
         return render_template("adddata.html"),"""<p>comp</p>"""
     return render_template("adddata.html"),form_df
-def allow(filename):
-    return "." in filename and filename.rsplit(".",1)[1].lower() in app.config["ALLOWED_EXTENSIONS"]
+
 
 @app.route("/analyze",methods=["GET","POST"])
 def analyse():
